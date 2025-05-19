@@ -1,0 +1,342 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #fcd8cc;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #ff8c94;
+    padding: 1.5em 1em;
+    color: #fff;
+    text-align: center;
+    border-bottom: 5px solid #e56b70;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  nav {
+    margin-top: 1em;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #f67280;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #c06c84;
+  }
+
+  .aboutpage {
+    max-width: 800px;
+    margin: 3em auto;
+    background-color: #ffe0e6;
+    border: 3px dashed #f67280;
+    padding: 2em;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .aboutpage h2 {
+    color: #c06c84;
+    margin-bottom: 1em;
+  }
+  
+  .aboutpage p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+  }
+  
+  #randomDogImage {
+    text-align: center;
+    margin-top: 2em;
+  }
+  
+  .random-dog-image {
+    max-width: 300px;
+    border-radius: 20px;
+    border: 4px solid #f8b195;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+  }
+
+/* Home page stuff */
+.intro {
+  text-align: center;
+  margin: 2em auto;
+}
+
+.carousel-container {
+  max-width: 600px;
+  margin: 2em auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.explore-button {
+  display: block;
+  margin: 2em auto;
+  background-color: #f67280;
+  color: white;
+  font-size: 1.2em;
+  padding: 0.75em 2em;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: #c06c84;
+}
+
+
+  /* Main Layout */
+  main.dog-app {
+    display: flex;
+    flex-direction: row;
+    padding: 2em;
+    gap: 2em;
+    flex: 1;
+  }
+  
+  #filterPanel {
+    flex: 1;
+    max-width: 300px;
+    background-color: #ffe0e6;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #traitFilters {
+    width: 100%;
+  }
+  
+  #traitFilters label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+  }
+  
+  #traitsList {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+  }  
+
+  #contentArea {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+  
+  #searchContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  
+  #breedSearch {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 2px solid #c06c84;
+    margin: 0 auto 0.5em auto;
+    display: block;
+  }
+  
+  #autocompleteList {
+    background-color: #fff;
+    border: 1px solid #f8b195;
+    border-radius: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 0 auto 1em auto;
+    z-index: 100;
+    width: 100%;
+    position: relative;
+  }
+  
+  #autocompleteList li {
+    padding: 0.5em;
+    cursor: pointer;
+  }
+  
+  #autocompleteList li:hover {
+    background-color: #f8b195;
+    color: white;
+  }
+  
+  /* Results */
+  #resultsSection {
+    text-align: center;
+  }
+  
+  #breedSelect {
+    padding: 0.5em;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 2px solid #c06c84;
+    margin-bottom: 2em;
+  }
+  
+  #breedInfo {
+    background-color: #fff0f5;
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+  }
+  
+  #breedInfo h2 {
+    color: #355c7d;
+    margin-bottom: 1em;
+  }
+  
+  #breedInfo p {
+    margin-bottom: 0.75em;
+  }
+  
+  #breedInfo img {
+    max-width: 300px;
+    border-radius: 50%;
+    margin-top: 1em;
+    border: 4px solid #f8b195;
+    display: block;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #ffb6b9;
+    padding: 1em;
+    color: #fff;
+    font-size: 0.9em;
+    border-top: 4px solid #f67280;
+    text-align: center;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #f67280;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #c06c84;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    main.dog-app {
+      flex-direction: column;
+    }
+  
+    nav a {
+      display: block;
+      margin: 0.5em auto;
+      width: 80%;
+    }
+  
+    #breedInfo img {
+      width: 100%;
+    }
+  
+    #searchInput,
+    #autocompleteList {
+      width: 100%;
+    }
+  
+    #filterPanel {
+      align-items: stretch;
+    }
+  
+    #searchContainer {
+      margin-bottom: 1em;
+    }
+  
+    #contentArea {
+      width: 100%;
+    }
+  }
+
+  .breed-card {
+    background-color: #fff0f5;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .breed-card img {
+    max-width: 300px;
+    border-radius: 20px;
+    border: 4px solid #f8b195;
+    margin: 1em 0;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    margin: 2em auto;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
