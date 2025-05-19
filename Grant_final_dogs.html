@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>Explore Dog Breeds</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <link rel="stylesheet" href="Grant_final.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/distribute/nouislider.min.css">
-    <!-- ADD defer to BOTH scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/distribute/nouislider.min.js" defer></script>
+    <link rel="stylesheet" href="dist/nouislider.min.css">
+    <script src="dist/nouislider.min.js" defer></script>
     <script src="Grant_final.js" defer></script>
   </head>
-  
 <body>
   <header>
     <h1>Explore Dog Breeds</h1>
@@ -17,11 +16,9 @@
       <a href="index.html">Home</a>
       <a href="Grant_final_about.html">About</a>
       <a href="Grant_final_dogs.html">Explore Dogs</a>
-      
     </nav>
   </header>
   <main class="dog-app">
-    <!-- Left Filter Panel -->
     <aside id="filterPanel">
       <h2>Filter by Traits</h2>
       <ul id="traitsList"></ul>
@@ -29,8 +26,6 @@
       <div id="weightSlider"></div>
       <p>Weight Range: <span id="weightMin">0</span> - <span id="weightMax">200</span> lbs</p>
     </aside>
-  
-    <!-- Right Content -->
     <section id="contentArea">
       <div id="searchContainer">
         <input type="text" id="breedSearch" placeholder="Search for a breed...">
@@ -40,10 +35,6 @@
       <div id="breedInfo"></div>
     </section>
   </main>
-  
-  
-  
-  
   <footer>
     <p>© 2025 Lily Grant's Dog App</p>
   </footer>
